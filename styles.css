@@ -1,3 +1,12 @@
+body{
+  background-image: url("https://i.postimg.cc/cH7gSfpC/image-share-1710499561006.png");
+  background-repeat:repeat;
+  background-attachment: fixed;
+
+
+
+
+}
 .loading-container {
     display: flex;
     justify-content: center;
