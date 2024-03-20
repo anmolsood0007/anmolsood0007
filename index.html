@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="floating-wpp.min.js"></script>
+<link rel="stylesheet" href="floating-wpp.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script type="application/ld+json">
   {
@@ -12,6 +15,32 @@
     "url": "https://anmolsood0007.github.io/ooo7/"
   }
 </script>
+<style>
+  #floatingButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  #container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+  }
+
+  #iframeContainer {
+    width: 400px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+  }
+</style>
 
   <meta name="google-site-verification" content="52x7LbtWLlFjR04Y2SovjqQuTYc0Wuig1g5nP9_qxbQ" />
   <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -21,7 +50,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="floating-wpp.min.js"></script>
+<link rel="stylesheet" href="floating-wpp.min.css">
   <title>अनमोल सूद हिन्दी शिक्षक </title>
+  
   <style>
     body {
       user-select: none;
@@ -200,32 +233,30 @@
               color: #0E0B3D;
               /* Initial font size */
             }
+            
           </style>
           <div
             class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-90 flex flex-col md:items-start md:text-left items-center text-center"data-aos="zoom-in">
+            <h1 id="changingHeading">अनमोल सूद</h1>
             <script>
-              const headings = ["<span id='heading'>अनमोल सूद</span>", "<span id='heading'>हिन्दी अध्यापक</span>", "<span id='heading'>GMS kauri</span>"];
-              let index = 0;
-              const cursor = "&#46;"; // dot character
-              setInterval(() => {
+              
+document.addEventListener('DOMContentLoaded', function() {
+    const headings = ['अनमोल सूद', 'हिंदी शिक्षक', 'GMS KAURI'];
+    let currentIndex = 0;
 
-                document.getElementById("heading").innerHTML = "";
-                let i = 0;
-                const typingEffect = setInterval(() => {
-                  document.getElementById("heading").innerHTML += cursor;
-                  i++;
-                  if (i === cursor.length) {
-                    clearInterval(typingEffect);
-                    document.getElementById("heading").innerHTML = headings[index];
-                    index = (index + 1) % headings.length;
-                  }
-                }, 200); // Typing speed
-              }, 2500); // Time between changing headings
+    function changeHeading() {
+        document.getElementById('changingHeading').textContent = headings[currentIndex];
+        currentIndex = (currentIndex + 1) % headings.length;
+    }
+
+    setInterval(changeHeading, 2000); // Change heading every 2 seconds
+});
+
             </script>
             </head>
 
             <body>
-              <h1><span id="heading">अनमोल सूद</span></h1>
+        
               <br>
 
 
@@ -1535,7 +1566,7 @@
 </body>
 <hr size="20%" width="50%" color="bg-blue-100" />
 <footer class="text-gray-600 body-font"data-aos="zoom-in">
-  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"data-aos="zoom-in">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <img src="https://i.postimg.cc/PrrhHyHS/apple-touch-icon.png" fill="none" stroke="currentColor"
         stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1632,7 +1663,10 @@
     box-shadow:
       z-index:100;
 
+      
+
   }
+  
 
   .body {
     user-select: none;
@@ -1641,11 +1675,45 @@
 
   /*=====  End of Fields  ======*/
 </style>
+
 <!-- our aos -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+
+<div id="myDiv"></div>
 </body>
+
+
+
+<script type="text/javascript">
+  $(function () {
+    $('#myDiv').floatingWhatsApp({
+      phone: '5491133359850'
+    });
+  });
+</script>
+
+
+<script>
+  let iframeOpen = false;
+  const iframeContainer = document.getElementById('iframeContainer');
+
+  function toggleIframe() {
+    iframeOpen = !iframeOpen;
+    if (iframeOpen) {
+      iframeContainer.style.display = 'block';
+    } else {
+      iframeContainer.style.display = 'none';
+    }
+  }
+
+  function changeIframeSize(width, height) {
+    const iframe = document.getElementById('chatIframe');
+    iframe.style.width = width + '2px';
+    iframe.style.height = height + 'px';
+  }
+</script>
 
 </html>
