@@ -1589,6 +1589,10 @@ document.addEventListener('DOMContentLoaded', function() {
         >
 
 
+    </p>
+    </svg>
+    </a>
+    </span>
 </footer>
 
 
@@ -1684,5 +1688,85 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="myDiv"></div>
 </body>
 
+
+<style>
+  /* Style for the chatbot button */
+  .chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: blue; /* Change to your desired background color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the back button */
+  .back-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 9999;
+    background-color: blue; /* Change to your desired background color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+  }
+  
+  /* Style for the chatbot iframe */
+  #chatbot-frame {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 9998;
+    width: 300px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    border: none;
+    display: none; /* Initially hidden */
+  }
+  </style>
+  </head>
+  <body>
+  
+  <!-- Your website content goes here -->
+  
+  <!-- Chatbot button -->
+  <button class="chatbot-button" onclick="toggleChatbot()">Anmol AI</button>
+  
+  <!-- Back button -->
+  <button class="back-button" onclick="collapseChatbot()">Back</button>
+  
+  <!-- Chatbot iframe -->
+  <iframe id="chatbot-frame" src="https://anmolsood0007.github.io/anmolchatbot/" title="Anmol AI"></iframe>
+  
+  <!-- End of your website content -->
+  
+  <script>
+  // Function to toggle the visibility of the chatbot
+  function toggleChatbot() {
+    var chatbotFrame = document.getElementById("chatbot-frame");
+    var backButton = document.querySelector(".back-button");
+  
+    chatbotFrame.style.display = chatbotFrame.style.display === "none" ? "block" : "none";
+    backButton.style.display = backButton.style.display === "none" ? "block" : "none";
+  }
+  
+  // Function to collapse the chatbot window
+  function collapseChatbot() {
+    var chatbotFrame = document.getElementById("chatbot-frame");
+    var backButton = document.querySelector(".back-button");
+  
+    chatbotFrame.style.display = "none";
+    backButton.style.display = "none";
+  }
+  </script>
+  
 
 </html>
